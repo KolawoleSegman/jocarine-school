@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Jocarine International Nursery & Primary School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --accent1: #4ECDC4;
+            --accent2: #FFCE5C;
+            --warm: #FF9F6B;
+            --dark: #2C3E50;
+            --light: #FFF8F0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff5252;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            text-decoration: none;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--accent1);
+            opacity: 0.5;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR (Logo fixed with robust fallback) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:28px;\'></i>');}">
+                <span class="ms-2">Jocarine International</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Mission & Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flyers.html">Flyers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TESTIMONIALS MAIN CONTENT -->
+    <div class="container section-padding">
+        <h1 class="text-center mb-4" style="color: var(--primary);">💬 Testimonials</h1>
+        <p class="text-center lead mb-5">Hear what our parents have to say about their experience with Jocarine International.</p>
+
+        <!-- Trusted by Parents Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 text-center">
+                <h3 class="mb-3" style="color: var(--dark);">Trusted by Parents, Loved by Children</h3>
+                <p>The success of our students and the satisfaction of their parents are the greatest measures of our commitment to excellence in education.</p>
+            </div>
+        </div>
+
+        <!-- Testimonials Grid (all from original document) -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"The dedication of the teachers and the nurturing environment have helped my child thrive academically and socially. I am impressed by the school's commitment to building strong moral values alongside academic excellence."</p>
+                    <h5 class="mt-3">— Mrs. Adeyemi Folake</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"Jocarine International has exceeded our expectations in every way. The moral foundation they provide is exceptional, and my daughter has grown tremendously in confidence and character since joining the school."</p>
+                    <h5 class="mt-3">— Mr. Okafor Chinedu</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"My children love coming to school every day, which speaks volumes about the positive learning environment. The teachers are caring, professional, and truly invested in each child's success."</p>
+                    <h5 class="mt-3">— Mrs. Ibrahim Aisha</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"The emphasis on Knowledge, Godliness, and Discipline is evident in everything the school does. I appreciate the strong home-school partnership and regular communication about my son's progress."</p>
+                    <h5 class="mt-3">— Mr. Eze Emmanuel</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"As a working parent, I value the safe and structured environment Jocarine provides. The facilities are excellent, and the curriculum is well-balanced between academics and character development."</p>
+                    <h5 class="mt-3">— Mrs. Bello Fatima</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="fst-italic">"The quality of education at Jocarine International is outstanding. My daughter has developed strong literacy and numeracy skills, and her creativity has flourished under the guidance of dedicated teachers."</p>
+                    <h5 class="mt-3">— Dr. Adeleke Tunde</h5>
+                    <p class="text-muted small">Parent</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="row g-4 mb-5 justify-content-center">
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h2 class="display-4 fw-bold" style="color: var(--primary);">18+</h2>
+                    <p class="mb-0">Years of Excellence</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h2 class="display-4 fw-bold" style="color: var(--primary);">500+</h2>
+                    <p class="mb-0">Happy Students</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h2 class="display-4 fw-bold" style="color: var(--primary);">98%</h2>
+                    <p class="mb-0">Parent Satisfaction</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <h2 class="display-4 fw-bold" style="color: var(--primary);">30+</h2>
+                    <p class="mb-0">Dedicated Staff</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center bg-white p-5 rounded-4 shadow-sm">
+                <h3 class="mb-3" style="color: var(--primary);">Join Our Community of Happy Parents</h3>
+                <p>Experience the difference quality education makes in your child's life.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="admission.html" class="btn btn-primary btn-lg">Apply for Admission</a>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">Schedule a Visit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (with all social links) -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Jocarine International Nursery & Primary School</h5>
+                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>Approved: 02/11/2008</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Proprietress: 08033249021<br>WhatsApp: +234 806 893 9047<br>Email: jocarineschool2007@gmail.com<br>info@jocarineinternationalnpschool.com<br>admissions@jocarineinternationalnpschool.com<br>principal@jocarineinternationalnpschool.com</p>
+                    <p><small>All official email accounts are managed via the school’s domain email service.</small></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-4 fs-3">
+                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white" title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2026 Jocarine International Nursery and Primary School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348068939047" target="_blank" class="floating-whatsapp">💬</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

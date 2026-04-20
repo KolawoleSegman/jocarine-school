@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities - Jocarine International Nursery & Primary School</title>
+    <!-- Bootstrap + Font Awesome + Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --accent1: #4ECDC4;
+            --accent2: #FFCE5C;
+            --warm: #FF9F6B;
+            --dark: #2C3E50;
+            --light: #FFF8F0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff5252;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            text-decoration: none;
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+        .facility-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+        .facility-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+        }
+        .social-icon {
+            transition: transform 0.2s;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR (Logo fixed - no "JI" text) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
+                <span class="ms-2">Jocarine International</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Mission & Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flyers.html">Flyers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FACILITIES MAIN CONTENT -->
+    <div class="container section-padding">
+        <h1 class="text-center mb-4" style="color: var(--primary);">🏫 Our Facilities</h1>
+        <p class="text-center lead mb-5">Modern, well-equipped spaces designed to inspire learning, creativity, and growth.</p>
+
+        <!-- Main Facilities Grid -->
+        <div class="row g-4 mb-5">
+            <!-- Computer Room -->
+            <div class="col-md-6 col-lg-3">
+                <div class="facility-card">
+                    <img src="images/facilities/computer-room.jpg" class="facility-img" alt="Computer Room" onerror="this.src='https://placehold.co/400x300?text=Computer+Room'">
+                    <div class="p-3">
+                        <h5>💻 Computer Room</h5>
+                        <p>Modern computer laboratory equipped with up-to-date technology to introduce students to digital literacy from an early age. Children learn basic computer skills, coding fundamentals, and how to use technology as a tool for learning and creativity.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- School Library -->
+            <div class="col-md-6 col-lg-3">
+                <div class="facility-card">
+                    <img src="images/facilities/library.jpg" class="facility-img" alt="School Library" onerror="this.src='https://placehold.co/400x300?text=Library'">
+                    <div class="p-3">
+                        <h5>📚 School Library</h5>
+                        <p>A well-stocked library filled with age-appropriate books, educational materials, and resources that foster a love for reading. Our library provides a quiet, comfortable space where students can explore stories and develop literacy skills.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Classrooms -->
+            <div class="col-md-6 col-lg-3">
+                <div class="facility-card">
+                    <img src="images/facilities/classrooms.jpg" class="facility-img" alt="Classrooms" onerror="this.src='https://placehold.co/400x300?text=Classrooms'">
+                    <div class="p-3">
+                        <h5>📖 Classrooms</h5>
+                        <p>Bright, spacious, and well-ventilated classrooms designed to create an optimal learning environment. Each classroom is equipped with modern teaching aids, comfortable furniture, and colorful displays that make learning engaging and enjoyable.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Playground -->
+            <div class="col-md-6 col-lg-3">
+                <div class="facility-card">
+                    <img src="images/facilities/playground.jpg" class="facility-img" alt="Playground" onerror="this.src='https://placehold.co/400x300?text=Playground'">
+                    <div class="p-3">
+                        <h5>🏃‍♂️ Playground & Learning Spaces</h5>
+                        <p>Safe outdoor play areas and learning spaces where children can engage in physical activities, develop motor skills, and enjoy social interaction. Our playground equipment is age-appropriate and designed to promote healthy physical development and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Features Section -->
+        <div class="mt-5 pt-4">
+            <h2 class="text-center mb-4" style="color: var(--primary);">✨ Additional Features</h2>
+            <p class="text-center mb-5">Every aspect of our facilities is designed with children's safety, comfort, and learning in mind.</p>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="feature-icon">🏥</div>
+                        <h4>Safe Environment</h4>
+                        <p>Secure premises with safety measures in place for peace of mind.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="feature-icon">🎨</div>
+                        <h4>Creative Spaces</h4>
+                        <p>Dedicated areas for arts, crafts, and creative expression.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="feature-icon">🌟</div>
+                        <h4>Clean & Hygienic</h4>
+                        <p>Well-maintained facilities with high standards of cleanliness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Button / See More -->
+        <div class="text-center mt-5">
+            <a href="gallery.html" class="btn btn-primary btn-lg">📸 Browse Our Facility Gallery</a>
+        </div>
+    </div>
+
+    <!-- FOOTER (with all social links) -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Jocarine International Nursery & Primary School</h5>
+                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>Approved: 02/11/2008</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Proprietress: 08033249021<br>WhatsApp: +234 806 893 9047<br>Email: jocarineschool2007@gmail.com<br>info@jocarineinternationalnpschool.com<br>admissions@jocarineinternationalnpschool.com<br>principal@jocarineinternationalnpschool.com</p>
+                    <p><small>All official email accounts are managed via the school’s domain email service.</small></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-4 fs-3">
+                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white" title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2026 Jocarine International Nursery and Primary School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348068939047?text=Hello!%20I%20would%20like%20to%20inquire%20about%20Jocarine%20International%20Nursery%20and%20Primary%20School." target="_blank" class="floating-whatsapp">💬</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision - Jocarine International Nursery & Primary School</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --accent1: #4ECDC4;
+            --accent2: #FFCE5C;
+            --warm: #FF9F6B;
+            --dark: #2C3E50;
+            --light: #FFF8F0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff5252;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            text-decoration: none;
+        }
+        .mission-card {
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        .mission-card:hover {
+            transform: translateY(-10px);
+        }
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR (Logo fixed with robust fallback) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <!-- Logo with fallback: try logo.png, then logo.jpeg, then a school icon -->
+                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:28px;\'></i>');}">
+                <span class="ms-2">Jocarine International</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Mission & Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flyers.html">Flyers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MISSION & VISION CONTENT -->
+    <div class="container section-padding">
+        <h1 class="text-center mb-5" style="color: var(--primary);">Our Mission & Vision</h1>
+        <p class="text-center lead mb-5">Our guiding principles that shape every aspect of education at Jocarine International</p>
+        
+        <div class="row g-5">
+            <!-- Mission Card -->
+            <div class="col-lg-6">
+                <div class="mission-card p-5 h-100" style="background-color: white;">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-bullseye fa-3x" style="color: var(--primary);"></i>
+                    </div>
+                    <h3 class="text-center mb-4" style="color: var(--primary);">Our Mission</h3>
+                    <p class="text-center fs-5">
+                        <em>To provide a safe, nurturing, and stimulating learning environment where every child is guided to develop strong foundational knowledge, moral values rooted in godliness, and disciplined character through quality early childhood education, dedicated teaching, and partnership with parents.</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="col-lg-6">
+                <div class="mission-card p-5 h-100" style="background-color: white;">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-eye fa-3x" style="color: var(--accent1);"></i>
+                    </div>
+                    <h3 class="text-center mb-4" style="color: var(--primary);">Our Vision</h3>
+                    <p class="text-center fs-5">
+                        <em>To be a leading school recognized for raising confident, morally upright, and intellectually curious children who are well-prepared for lifelong learning and positive contribution to society.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Commitments Section (from original document) -->
+        <div class="mt-5 pt-4">
+            <h2 class="text-center mb-4" style="color: var(--primary);">Our Commitments</h2>
+            <p class="text-center mb-5">How we bring our mission and vision to life every day</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Safe & Nurturing Environment</h4>
+                        <p>We create a secure, supportive atmosphere where every child feels valued, protected, and encouraged to explore their potential without fear.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+                        <i class="fas fa-microscope fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Quality Education</h4>
+                        <p>Through dedicated teaching and innovative methods, we ensure every child receives excellent early childhood education that builds strong foundations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100 text-center">
+                        <i class="fas fa-handshake fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Home-School Partnership</h4>
+                        <p>We believe in close collaboration with parents, recognizing that strong partnerships are essential for every child's success and development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Living Our Core Values Section -->
+        <div class="mt-5 pt-4">
+            <h2 class="text-center mb-4" style="color: var(--primary);">Living Our Core Values</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-center mb-3">
+                            <span class="display-4 fw-bold" style="color: var(--primary);">K</span>
+                        </div>
+                        <h4 class="text-center">Knowledge</h4>
+                        <p>We emphasize strong foundational knowledge through early literacy, numeracy, creativity, and intellectual curiosity. Our quality instruction ensures learners develop the academic skills needed for lifelong learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-center mb-3">
+                            <span class="display-4 fw-bold" style="color: var(--primary);">G</span>
+                        </div>
+                        <h4 class="text-center">Godliness</h4>
+                        <p>Moral values rooted in godliness guide our character development programs. We nurture responsible, morally upright individuals who understand the importance of integrity, compassion, and ethical behavior.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="text-center mb-3">
+                            <span class="display-4 fw-bold" style="color: var(--primary);">D</span>
+                        </div>
+                        <h4 class="text-center">Discipline</h4>
+                        <p>Through structured guidance and supportive teaching, we help children develop disciplined character, self-control, and the ability to make positive choices that contribute to their success and society.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER (with all social links) -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Jocarine International Nursery & Primary School</h5>
+                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>
+                    Approved: 02/11/2008</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Proprietress: 08033249021<br>
+                    WhatsApp: +234 806 893 9047<br>
+                    Email: jocarineschool2007@gmail.com<br>
+                    info@jocarineinternationalnpschool.com<br>
+                    admissions@jocarineinternationalnpschool.com<br>
+                    principal@jocarineinternationalnpschool.com</p>
+                    <p><small>All official email accounts are managed via the school’s domain email service.</small></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-4 fs-3">
+                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white" title="Snapchat">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">
+                            💬 Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2026 Jocarine International Nursery and Primary School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348068939047" target="_blank" class="floating-whatsapp">💬</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

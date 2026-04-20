@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Jocarine International School | Building Strong Foundations</title>
+    <!-- Bootstrap + Font Awesome + Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --accent1: #4ECDC4;
+            --accent2: #FFCE5C;
+            --warm: #FF9F6B;
+            --dark: #2C3E50;
+            --light: #FFF8F0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+        }
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #ff5252;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            text-decoration: none;
+        }
+        .hero-img {
+            height: 90vh;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            bottom: 20%;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .value-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .value-card:hover {
+            transform: translateY(-8px);
+        }
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+        .activity-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+        .welcome-slider-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR (Logo fixed - loads actual image) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school\' style=\'font-size:28px;\'></i>');}">
+                <span class="ms-2">Jocarine International</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mission.html">Mission & Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flyers.html">Flyers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO CAROUSEL (flipping every 5 seconds) -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/hero/19.jpeg" class="d-block w-100 hero-img" alt="School Image" onerror="this.src='https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold">Jocarine International School</h1>
+                    <p>Knowledge • Godliness • Discipline</p>
+                    <a href="admission.html" class="btn btn-primary btn-lg">Apply for Admission</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero/25.jpeg" class="d-block w-100 hero-img" alt="School Image" onerror="this.src='https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                <div class="carousel-caption"><h2>Quality Education for Every Child</h2></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero/40.jpeg" class="d-block w-100 hero-img" alt="School Image" onerror="this.src='https://images.pexels.com/photos/8613102/pexels-photo-8613102.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                <div class="carousel-caption"><h2>Safe & Friendly Learning Environment</h2></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero/59.jpeg" class="d-block w-100 hero-img" alt="School Image" onerror="this.src='https://images.pexels.com/photos/8613088/pexels-photo-8613088.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                <div class="carousel-caption"><h2>Building Future Leaders</h2></div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/hero/61.jpeg" class="d-block w-100 hero-img" alt="School Image" onerror="this.src='https://images.pexels.com/photos/8486187/pexels-photo-8486187.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+                <div class="carousel-caption"><h2>Excellence in Education</h2></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Welcome Section (using your actual gallery images) -->
+    <div class="container section-padding">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="mb-4" style="color: var(--primary);">Welcome to Jocarine International Nursery and Primary School</h2>
+                <p class="lead">A child-centered school founded in 2007, dedicated to providing young children with a strong academic and moral foundation in a warm, nurturing environment.</p>
+                <p>Jocarine International Nursery and Primary School is a child-centered educational institution founded in 2007 by Mrs. Josephine Chukwujekwu, a respected retired Director of Education. We provide young children with a strong academic and moral foundation during their formative years, emphasizing early literacy, numeracy, creativity, social skills, and moral upbringing.</p>
+                <a href="about.html" class="btn btn-primary mt-3">Learn more about us →</a>
+            </div>
+            <div class="col-lg-5 text-center">
+                <img id="welcomeSliderImg" class="welcome-slider-img" src="images/gallary/27.jpeg" alt="School activities">
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="container-fluid" style="background-color: #e8f4f8;">
+        <div class="container section-padding">
+            <h2 class="text-center mb-5" style="color: var(--primary);">Our Core Values</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <i class="fas fa-book-open fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Knowledge</h4>
+                        <p>Strong foundational knowledge through quality early childhood education and dedicated teaching.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <i class="fas fa-praying-hands fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Godliness</h4>
+                        <p>Moral values rooted in godliness, ensuring learners grow into responsible individuals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <i class="fas fa-gavel fa-3x mb-3" style="color: var(--primary);"></i>
+                        <h4>Discipline</h4>
+                        <p>Disciplined character development in a safe, nurturing learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facilities & Activities Sliders (each showing correct category images) -->
+    <div class="container section-padding">
+        <h2 class="text-center mb-5" style="color: var(--primary);">Our Facilities & Activities</h2>
+        <div class="row g-4">
+            <!-- Learning Activities (general gallary images) -->
+            <div class="col-md-3">
+                <div class="activity-card">
+                    <img id="learningImg" class="activity-img" src="images/gallary/27.jpeg" alt="Learning activities">
+                    <div class="p-3"><h5>Learning Activities</h5><p>Interactive educational games</p></div>
+                </div>
+            </div>
+            <!-- Practical Skills (from practicals folder) -->
+            <div class="col-md-3">
+                <div class="activity-card">
+                    <img id="practicalImg" class="activity-img" src="images/gallary/practicals/20.jpeg" alt="Practical skills">
+                    <div class="p-3"><h5>Practical Skills</h5><p>Hands-on cooking & life skills</p></div>
+                </div>
+            </div>
+            <!-- Physical Education (Kunfu + sports - using kunfu folder) -->
+            <div class="col-md-3">
+                <div class="activity-card">
+                    <img id="kunfuImg" class="activity-img" src="images/gallary/kunfu/1.jpeg" alt="Kunfu training">
+                    <div class="p-3"><h5>Physical Education</h5><p>Kunfu & fitness training</p></div>
+                </div>
+            </div>
+            <!-- Cultural Activities (from Cultural Day folder) -->
+            <div class="col-md-3">
+                <div class="activity-card">
+                    <img id="culturalImg" class="activity-img" src="images/gallary/Cultural%20Day/1.jpeg" alt="Cultural dance">
+                    <div class="p-3"><h5>Cultural Activities</h5><p>Rich cultural performances</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="facilities.html" class="btn btn-primary">View all facilities →</a>
+        </div>
+    </div>
+
+    <!-- Mission & Vision Preview -->
+    <div class="container-fluid" style="background-color: #fef5e8;">
+        <div class="container section-padding">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <h3 style="color: var(--primary);">Our Mission</h3>
+                        <p>To provide a safe, nurturing, and stimulating learning environment where every child is guided to develop strong foundational knowledge, moral values rooted in godliness, and disciplined character.</p>
+                        <a href="mission.html" class="btn btn-outline-primary">Read Full Mission Statement →</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <h3 style="color: var(--primary);">Our Vision</h3>
+                        <p>To be a leading school recognized for raising confident, morally upright, and intellectually curious children who are well-prepared for lifelong learning and positive contribution to society.</p>
+                        <a href="mission.html" class="btn btn-outline-primary">Read Full Vision Statement →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Preview -->
+    <div class="container section-padding">
+        <h2 class="text-center mb-5" style="color: var(--primary);">What Parents Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color: var(--accent1);"></i>
+                    <p class="fst-italic">"The dedication of the teachers and the nurturing environment have helped my child thrive academically and socially."</p>
+                    <h5 class="mt-3">— Mrs. Adeyemi</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color: var(--accent1);"></i>
+                    <p class="fst-italic">"Jocarine International has exceeded our expectations. The moral foundation they provide is exceptional."</p>
+                    <h5 class="mt-3">— Mr. Okafor</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color: var(--accent1);"></i>
+                    <p class="fst-italic">"My children love coming to school every day. The learning environment is truly inspiring."</p>
+                    <h5 class="mt-3">— Mrs. Ibrahim</h5>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="testimonials.html" class="btn btn-outline-primary">View all testimonials →</a>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container-fluid" style="background-color: var(--primary);">
+        <div class="container text-center py-5">
+            <h2 class="text-white">Ready to Join Our School Community?</h2>
+            <p class="text-white lead">Give your child the gift of quality education in a nurturing environment.</p>
+            <a href="admission.html" class="btn btn-light btn-lg mt-3">Apply Here →</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Jocarine International Nursery & Primary School</h5>
+                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>Approved: 02/11/2008</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Proprietress: 08033249021<br>WhatsApp: +234 806 893 9047<br>Email: jocarineschool2007@gmail.com<br>info@jocarineinternationalnpschool.com<br>admissions@jocarineinternationalnpschool.com<br>principal@jocarineinternationalnpschool.com</p>
+                    <p><small>All official email accounts are managed via the school’s domain email service.</small></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-4 fs-3">
+                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-center mb-0">&copy; 2026 Jocarine International Nursery and Primary School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348068939047" target="_blank" class="floating-whatsapp">💬</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ========== WELCOME SECTION SLIDER (your actual gallery images) ==========
+        const galleryImages = [
+            "images/gallary/27.jpeg", "images/gallary/37.jpeg", "images/gallary/44.jpeg",
+            "images/gallary/Game.jpeg", "images/gallary/63.jpeg", "images/gallary/64.jpeg",
+            "images/gallary/65.jpeg", "images/gallary/66.jpeg"
+        ];
+        let welcomeIdx = 0;
+        const welcomeImg = document.getElementById('welcomeSliderImg');
+        if (welcomeImg) {
+            setInterval(() => {
+                welcomeIdx = (welcomeIdx + 1) % galleryImages.length;
+                welcomeImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    welcomeImg.src = galleryImages[welcomeIdx];
+                    welcomeImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600'; };
+                    welcomeImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+
+        // ========== LEARNING ACTIVITIES SLIDER (general gallery images) ==========
+        const learningImages = [
+            "images/gallary/27.jpeg", "images/gallary/37.jpeg", "images/gallary/44.jpeg",
+            "images/gallary/Game.jpeg", "images/gallary/63.jpeg", "images/gallary/64.jpeg",
+            "images/gallary/65.jpeg", "images/gallary/66.jpeg"
+        ];
+        let learningIdx = 0;
+        const learningImg = document.getElementById('learningImg');
+        if (learningImg) {
+            setInterval(() => {
+                learningIdx = (learningIdx + 1) % learningImages.length;
+                learningImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    learningImg.src = learningImages[learningIdx];
+                    learningImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613105/pexels-photo-8613105.jpeg?auto=compress&cs=tinysrgb&w=400'; };
+                    learningImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+
+        // ========== PRACTICAL SKILLS SLIDER (from practicals folder) ==========
+        const practicalImages = [
+            "images/gallary/practicals/20.jpeg", "images/gallary/practicals/21.jpeg",
+            "images/gallary/practicals/23.jpeg", "images/gallary/practicals/24.jpeg",
+            "images/gallary/practicals/35.jpeg", "images/gallary/practicals/36.jpeg"
+        ];
+        let practicalIdx = 0;
+        const practicalImg = document.getElementById('practicalImg');
+        if (practicalImg) {
+            setInterval(() => {
+                practicalIdx = (practicalIdx + 1) % practicalImages.length;
+                practicalImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    practicalImg.src = practicalImages[practicalIdx];
+                    practicalImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613088/pexels-photo-8613088.jpeg?auto=compress&cs=tinysrgb&w=400'; };
+                    practicalImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+
+        // ========== PHYSICAL EDUCATION (KUNFU) SLIDER ==========
+        const kunfuImages = [];
+        for (let i = 1; i <= 12; i++) kunfuImages.push(`images/gallary/kunfu/${i}.jpeg`);
+        let kunfuIdx = 0;
+        const kunfuImg = document.getElementById('kunfuImg');
+        if (kunfuImg) {
+            setInterval(() => {
+                kunfuIdx = (kunfuIdx + 1) % kunfuImages.length;
+                kunfuImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    kunfuImg.src = kunfuImages[kunfuIdx];
+                    kunfuImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8486187/pexels-photo-8486187.jpeg?auto=compress&cs=tinysrgb&w=400'; };
+                    kunfuImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+
+        // ========== CULTURAL ACTIVITIES SLIDER (from Cultural Day folder) ==========
+        const culturalImages = [];
+        for (let i = 1; i <= 20; i++) culturalImages.push(`images/gallary/Cultural%20Day/${i}.jpeg`);
+        let culturalIdx = 0;
+        const culturalImg = document.getElementById('culturalImg');
+        if (culturalImg) {
+            setInterval(() => {
+                culturalIdx = (culturalIdx + 1) % culturalImages.length;
+                culturalImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    culturalImg.src = culturalImages[culturalIdx];
+                    culturalImg.onerror = function() { this.src = 'https://images.pexels.com/photos/9775067/pexels-photo-9775067.jpeg?auto=compress&cs=tinysrgb&w=400'; };
+                    culturalImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
