@@ -119,12 +119,12 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo fixed - no text placeholder) -->
+    <!-- NAVIGATION BAR (Logo fixed) -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <!-- Logo with robust fallback - no "JI" text -->
-                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                <!-- Corrected logo path: images/logo.png/logo.jpeg -->
+                <img src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
                      onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
                 <span class="ms-2">Jocarine International</span>
             </a>
@@ -148,7 +148,7 @@
         </div>
     </nav>
 
-    <!-- ABOUT CONTENT with rotating right-side image (19.jpeg and 46.jpeg) -->
+    <!-- ABOUT CONTENT with rotating right-side image -->
     <div class="container section-padding">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -163,14 +163,14 @@
                 <p>Jocarine International Nursery and Primary School believes strongly in close collaboration between parents, teachers, and pupils, recognizing that a strong home–school partnership is essential for every child’s success.</p>
             </div>
             
-            <!-- Rotating image slider: 19.jpeg and 46.jpeg (alternating every 5 seconds) -->
+            <!-- Rotating image slider: 19.jpeg and 46.jpeg -->
             <div class="col-lg-6 text-center">
                 <img id="aboutSideImage" class="about-image" src="images/hero/19.jpeg" alt="Jocarine School">
             </div>
         </div>
     </div>
 
-    <!-- Our Founder Section with Image Slider (flips every 5 seconds) -->
+    <!-- Our Founder Section with Image Slider -->
     <div class="container section-padding" style="background-color: #fef5e8; border-radius: 30px; margin-bottom: 30px;">
         <div class="text-center mb-5">
             <h2 style="color: var(--primary);">Our Founder</h2>
@@ -189,7 +189,7 @@
         </div>
     </div>
 
-    <!-- What Makes Us Special (4 pillars) -->
+    <!-- What Makes Us Special -->
     <div class="container section-padding">
         <h2 class="text-center mb-5" style="color: var(--primary);">What Makes Us Special</h2>
         <div class="row g-4">
@@ -319,12 +319,11 @@
         // ========== RIGHT SIDE IMAGE SLIDER (19.jpeg and 46.jpeg) ==========
         const sideImages = [
             "images/hero/19.jpeg",
-            "images/gallary/46.jpeg"   // adjust path if 46.jpeg is in a different folder; user said "19.jpeg, 46.jpeg"
+            "images/gallary/46.jpeg"
         ];
         let sideIndex = 0;
         const sideImg = document.getElementById('aboutSideImage');
         if (sideImg) {
-            // Set initial image with fallback
             sideImg.src = sideImages[0];
             sideImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600'; };
             setInterval(() => {
@@ -338,7 +337,7 @@
             }, 5000);
         }
 
-        // ========== FOUNDER IMAGE SLIDER (1.jpeg to 4.jpeg) ==========
+        // ========== FOUNDER IMAGE SLIDER ==========
         const founderImages = [
             "images/Propretries%20Images/1.jpeg",
             "images/Propretries%20Images/2.jpeg",
