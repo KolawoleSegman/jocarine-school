@@ -71,7 +71,7 @@
         }
 
         .activity-img {
-            height: 220px; object-fit: cover;
+            height: 220px; width: 100%; object-fit: cover;
         }
 
         .welcome-slider-img {
@@ -116,7 +116,7 @@
         </div>
     </nav>
 
-    <!-- HERO CAROUSEL -->
+    <!-- HERO CAROUSEL (unchanged) -->
     <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
@@ -169,29 +169,26 @@
         </div>
     </div>
 
-    <!-- FACILITIES & ACTIVITIES -->
+    <!-- FACILITIES & ACTIVITIES (merged computer lab card + rotating images) -->
     <div class="container section-padding">
         <h2 class="text-center mb-5" style="color: var(--primary);">Our Facilities & Activities</h2>
         <div class="row g-4">
-            <div class="col-md-3">
+            <!-- Computer Laboratory (single card, rotates between com1.png and com2.png) -->
+            <div class="col-md-4">
                 <div class="activity-card">
-                    <img src="images/com1.png" class="activity-img w-100" alt="Computer Lab 1">
-                    <div class="p-3"><h5>Computer Laboratory</h5><p class="text-muted">Modern digital learning</p></div>
+                    <img id="computerLabImg" class="activity-img" src="images/com1.png" alt="Computer Laboratory">
+                    <div class="p-3"><h5>Computer Laboratory</h5><p class="text-muted">Modern digital learning & hands-on tech education</p></div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="activity-card">
-                    <img src="images/com2.png" class="activity-img w-100" alt="Computer Lab 2">
-                    <div class="p-3"><h5>Computer Laboratory</h5><p class="text-muted">Hands-on tech education</p></div>
-                </div>
-            </div>
-            <div class="col-md-3">
+            <!-- Learning Activities (rotating) -->
+            <div class="col-md-4">
                 <div class="activity-card">
                     <img id="learningImg" class="activity-img" src="images/gallary/27.jpeg" alt="Learning">
                     <div class="p-3"><h5>Learning Activities</h5><p class="text-muted">Interactive education</p></div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <!-- Cultural Activities (rotating) -->
+            <div class="col-md-4">
                 <div class="activity-card">
                     <img id="culturalImg" class="activity-img" src="images/gallary/Cultural%20Day/1.jpeg" alt="Cultural">
                     <div class="p-3"><h5>Cultural Activities</h5><p class="text-muted">Performances & celebrations</p></div>
@@ -268,7 +265,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Welcome slider using your gallery images
+        // 1. Welcome slider
         const galleryImages = [
             "images/gallary/27.jpeg", "images/gallary/37.jpeg", "images/gallary/44.jpeg",
             "images/gallary/Game.jpeg", "images/gallary/63.jpeg", "images/gallary/64.jpeg",
@@ -283,7 +280,26 @@
                 setTimeout(() => { welcomeImg.src = galleryImages[wIdx]; welcomeImg.style.opacity = '1'; }, 200);
             }, 5000);
         }
-        // Learning activities slider
+
+        // 2. Computer Lab slider (rotates between com1.png and com2.png)
+        const computerLabImages = [
+            "images/com1.png",
+            "images/com2.png"
+        ];
+        let clIdx = 0;
+        const computerLabImg = document.getElementById('computerLabImg');
+        if(computerLabImg) {
+            setInterval(() => {
+                clIdx = (clIdx + 1) % computerLabImages.length;
+                computerLabImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    computerLabImg.src = computerLabImages[clIdx];
+                    computerLabImg.style.opacity = '1';
+                }, 200);
+            }, 5000);
+        }
+
+        // 3. Learning activities slider
         const learningImages = [
             "images/gallary/27.jpeg", "images/gallary/37.jpeg", "images/gallary/44.jpeg",
             "images/gallary/Game.jpeg", "images/gallary/63.jpeg", "images/gallary/64.jpeg",
@@ -298,7 +314,8 @@
                 setTimeout(() => { learningImg.src = learningImages[lIdx]; learningImg.style.opacity = '1'; }, 200);
             }, 5000);
         }
-        // Cultural activities slider
+
+        // 4. Cultural activities slider
         const culturalImages = [];
         for(let i=1; i<=20; i++) culturalImages.push(`images/gallary/Cultural%20Day/${i}.jpeg`);
         let cIdx = 0;
