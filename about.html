@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Jocarine International Nursery & Primary School</title>
-    
+    <meta name="description" content="Learn about Jocarine International Nursery & Primary School - Founded in 2007 by Mrs. Josephine Chukwujekwu. Excellence in early childhood education with strong moral values.">
+    <title>About Us | Jocarine International Nursery & Primary School</title>
+   
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+   
     <style>
         :root {
             --primary: #FF6B6B;
@@ -21,112 +22,132 @@
             --dark: #2C3E50;
             --light: #FFF8F0;
         }
+        
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--light);
             color: var(--dark);
+            line-height: 1.7;
         }
-        h1, h2, h3, h4, h5 {
+        
+        h1, h2, h3, h4, h5, .navbar-brand span {
             font-family: 'Poppins', sans-serif;
-            color: var(--dark);
+            font-weight: 600;
         }
+
         .navbar {
-            background-color: white;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
         }
+
+        .hero-about {
+            background: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), 
+                        url('images/hero/19.jpeg') center/cover no-repeat;
+            color: white;
+            padding: 140px 0 100px;
+            position: relative;
+        }
+
         .btn-primary {
             background-color: var(--primary);
             border: none;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
         .btn-primary:hover {
             background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
         }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .value-card, .special-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+        
+        .value-card:hover, .special-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .founder-img {
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transition: transform 0.6s ease;
+        }
+        
+        .founder-img:hover {
+            transform: scale(1.03);
+        }
+
+        .about-image {
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            transition: all 0.5s ease;
+        }
+
         footer {
             background-color: var(--dark);
             color: white;
         }
+
         .floating-whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: #25D366;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 9999;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
-        .about-image {
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            transition: opacity 0.5s ease;
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
         }
-        .section-padding {
-            padding: 60px 0;
+
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
-        .founder-img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: opacity 0.5s ease;
-        }
-        .value-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-            height: 100%;
-        }
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
-        .value-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .special-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            height: 100%;
-        }
-        .special-icon {
-            font-size: 2rem;
-            color: var(--accent1);
-            margin-bottom: 12px;
-        }
-        .navbar-brand img {
-            max-height: 50px;
-            width: auto;
+        .nav-link:hover {
+            color: var(--primary) !important;
         }
     </style>
 </head>
 <body>
-
-    <!-- NAVIGATION BAR (Logo fixed) -->
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <!-- Corrected logo path: images/logo.png/logo.jpeg -->
-                <img src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
-                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
-                <span class="ms-2">Jocarine International</span>
+                <img src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="55" onerror="this.onerror=null; this.src='images/logo.jpeg';">
+                <span class="ms-3 fs-4">Jocarine International</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -134,148 +155,126 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active text-primary" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="mission.html">Mission & Vision</a></li>
                     <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">News & Updates</a></li>
                     <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
-                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="flyers.html">Flyers</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ABOUT CONTENT with rotating right-side image -->
+    <!-- HERO ABOUT -->
+    <section class="hero-about text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">About Jocarine International</h1>
+            <p class="lead col-lg-8 mx-auto">Nurturing young minds with knowledge, godliness, and discipline since 2007.</p>
+        </div>
+    </section>
+
+    <!-- MAIN ABOUT CONTENT -->
     <div class="container section-padding">
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <h2 style="color: var(--primary); margin-bottom: 20px;">About Jocarine International Nursery and Primary School</h2>
+                <h2 style="color: var(--primary); font-size: 2.4rem;">A Legacy of Excellence in Early Childhood Education</h2>
+                <p class="lead mt-4">Jocarine International Nursery and Primary School was founded in 2007 by <strong>Mrs. Josephine Chukwujekwu</strong>, a retired Director of Education with a lifelong passion for quality teaching and character formation.</p>
                 
-                <p>Jocarine International Nursery and Primary School is a child-centered educational institution founded in 2007 by <strong>Mrs. Josephine Chukwujekwu</strong>, a respected retired Director of Education whose lifelong career was devoted to improving standards in teaching and learning. The school was established out of her passion to provide young children with a strong academic and moral foundation during their formative years.</p>
+                <p>We are a child-centered institution committed to providing a strong academic and moral foundation during the most critical years of a child’s development.</p>
                 
-                <p>Built on the core values of <strong>Knowledge, Godliness, and Discipline</strong>, the school is committed to nurturing well-rounded pupils through quality instruction, character development, and a supportive learning environment.</p>
-                
-                <p>The school emphasizes early literacy, numeracy, creativity, social skills, and moral upbringing, ensuring learners grow into confident, responsible, and intellectually curious individuals.</p>
-                
-                <p>Jocarine International Nursery and Primary School believes strongly in close collaboration between parents, teachers, and pupils, recognizing that a strong home–school partnership is essential for every child’s success.</p>
+                <div class="mt-5">
+                    <a href="admission.html" class="btn btn-primary btn-lg me-3">Join Our Family</a>
+                    <a href="gallery.html" class="btn btn-outline-primary btn-lg">View Our Campus</a>
+                </div>
             </div>
             
-            <!-- Rotating image slider: 19.jpeg and 46.jpeg -->
-            <div class="col-lg-6 text-center">
-                <img id="aboutSideImage" class="about-image" src="images/hero/19.jpeg" alt="Jocarine School">
+            <div class="col-lg-6">
+                <img id="aboutSideImage" class="about-image img-fluid" src="images/hero/19.jpeg" alt="Jocarine School Campus" loading="lazy">
             </div>
         </div>
     </div>
 
-    <!-- Our Founder Section with Image Slider -->
-    <div class="container section-padding" style="background-color: #fef5e8; border-radius: 30px; margin-bottom: 30px;">
+    <!-- FOUNDER SECTION -->
+    <div class="container section-padding" style="background: #fef5e8; border-radius: 30px;">
         <div class="text-center mb-5">
             <h2 style="color: var(--primary);">Our Founder</h2>
             <p class="lead">Mrs. Josephine Chukwujekwu — A Legacy of Excellence</p>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5">
             <div class="col-md-6 text-center">
-                <img id="founderSliderImg" class="founder-img" src="images/Propretries%20Images/1.jpeg" alt="Founder Mrs. Josephine Chukwujekwu">
+                <img id="founderSliderImg" class="founder-img img-fluid" src="images/Propretries Images/1.jpeg" alt="Mrs. Josephine Chukwujekwu" loading="lazy">
             </div>
             <div class="col-md-6">
-                <h4>A Respected Retired Director of Education</h4>
-                <p>Mrs. Josephine Chukwujekwu dedicated her lifelong career to improving standards in teaching and learning. Her passion for providing young children with strong academic and moral foundations inspired the establishment of Jocarine International in 2007, creating a legacy of excellence in early childhood education.</p>
-                <p>Under her visionary leadership, the school has grown into a beacon of quality education, blending modern pedagogy with timeless values. Her hands-on approach and commitment to each child's holistic development continue to guide the school's philosophy today.</p>
-                <p><i class="fas fa-quote-left me-2" style="color: var(--primary);"></i> <em>Every child deserves a foundation that nurtures both mind and character.</em> — Mrs. Josephine Chukwujekwu</p>
+                <h4 class="mb-4">A Visionary in Education</h4>
+                <p>Mrs. Josephine Chukwujekwu dedicated her career to raising educational standards. Her deep passion for children led her to establish Jocarine International in 2007, creating a nurturing environment where academic excellence meets strong moral upbringing.</p>
+                <p>Her philosophy continues to guide every decision we make today.</p>
+                <blockquote class="mt-4 border-start border-primary border-4 ps-4">
+                    <em>"Every child deserves a foundation that nurtures both mind and character."</em>
+                    <footer class="mt-3 fw-medium">— Mrs. Josephine Chukwujekwu</footer>
+                </blockquote>
             </div>
         </div>
     </div>
 
-    <!-- What Makes Us Special -->
+    <!-- WHAT MAKES US SPECIAL -->
     <div class="container section-padding">
         <h2 class="text-center mb-5" style="color: var(--primary);">What Makes Us Special</h2>
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="special-card">
-                    <div class="special-icon"><i class="fas fa-chalkboard-user"></i></div>
-                    <h5>Quality Education</h5>
-                    <p>Strong foundational knowledge through dedicated teaching</p>
+                    <div class="special-icon text-primary"><i class="fas fa-chalkboard-user"></i></div>
+                    <h5>Academic Excellence</h5>
+                    <p>Strong foundation in literacy, numeracy and creative thinking</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="special-card">
-                    <div class="special-icon"><i class="fas fa-heart"></i></div>
-                    <h5>Moral Values</h5>
-                    <p>Character development rooted in godliness</p>
+                    <div class="special-icon" style="color: #FF9F6B;"><i class="fas fa-heart"></i></div>
+                    <h5>Moral Formation</h5>
+                    <p>Character development rooted in godliness and integrity</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="special-card">
-                    <div class="special-icon"><i class="fas fa-handshake"></i></div>
-                    <h5>Partnership</h5>
-                    <p>Strong collaboration between parents and teachers</p>
+                    <div class="special-icon text-info"><i class="fas fa-handshake"></i></div>
+                    <h5>Parent Partnership</h5>
+                    <p>Close collaboration between home and school</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="special-card">
-                    <div class="special-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="special-icon" style="color: var(--accent1);"><i class="fas fa-seedling"></i></div>
                     <h5>Holistic Growth</h5>
-                    <p>Nurturing confident, responsible learners</p>
+                    <p>Developing confident, responsible, and compassionate children</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Core Values Section -->
+    <!-- CORE VALUES -->
     <div class="container section-padding" style="background-color: #e8f4f8; border-radius: 30px;">
         <h2 class="text-center mb-5" style="color: var(--primary);">Our Core Values</h2>
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-md-4">
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-book-open"></i></div>
+                    <span class="value-icon" style="color: var(--primary);">📖</span>
                     <h4>Knowledge</h4>
-                    <p>Strong foundational knowledge through quality early childhood education and dedicated teaching. We emphasize early literacy, numeracy, creativity, and intellectual curiosity.</p>
+                    <p>Building strong academic foundations through quality teaching and creative learning experiences.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-praying-hands"></i></div>
+                    <span class="value-icon" style="color: #6c5ce7;">🙏</span>
                     <h4>Godliness</h4>
-                    <p>Moral values rooted in godliness, ensuring learners grow into responsible, compassionate individuals with integrity and ethical behavior.</p>
+                    <p>Instilling moral values, integrity, and compassion in every child.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-gavel"></i></div>
+                    <span class="value-icon" style="color: #e17055;">⚖️</span>
                     <h4>Discipline</h4>
-                    <p>Disciplined character development in a safe, nurturing environment. We help children develop self-control and the ability to make positive choices.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Our Educational Approach -->
-    <div class="container section-padding">
-        <h2 class="text-center mb-5" style="color: var(--primary);">Our Educational Approach</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
-                    <h4><i class="fas fa-graduation-cap me-2" style="color: var(--accent1);"></i> Academic Excellence</h4>
-                    <ul class="mt-3 list-unstyled">
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Early literacy and numeracy development</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Creative learning methodologies</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Quality instruction by dedicated teachers</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Supportive learning environment</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="p-4 bg-white rounded-3 shadow-sm h-100">
-                    <h4><i class="fas fa-heart me-2" style="color: var(--primary);"></i> Character Development</h4>
-                    <ul class="mt-3 list-unstyled">
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Moral values and godliness</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Social skills development</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Discipline and responsibility</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Building confident individuals</li>
-                    </ul>
+                    <p>Developing self-control, responsibility, and respect for self and others.</p>
                 </div>
             </div>
         </div>
@@ -287,22 +286,22 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5>Jocarine International Nursery & Primary School</h5>
-                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>Approved: 02/11/2008</p>
+                    <p>14, Metropolitan College Road, Isolo, Lagos State<br>
+                    Approved: 02/11/2008</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Proprietress: 08033249021<br>WhatsApp: +234 806 893 9047<br>Email: jocarineschool2007@gmail.com<br>info@jocarineinternationalnpschool.com<br>admissions@jocarineinternationalnpschool.com<br>principal@jocarineinternationalnpschool.com</p>
-                    <p><small>All official email accounts are managed via the school’s domain email service.</small></p>
+                    <h5>Contact Information</h5>
+                    <p>Proprietress: 08033249021<br>
+                    WhatsApp: +234 806 893 9047<br>
+                    Email: jocarineschool2007@gmail.com</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
-                    <div class="d-flex gap-4 fs-3">
+                    <div class="d-flex gap-4 fs-3 mb-4">
                         <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white"><i class="fab fa-tiktok"></i></a>
                     </div>
-                    <div class="mt-4">
-                        <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">💬 Chat on WhatsApp</a>
-                    </div>
+                    <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success">💬 Chat on WhatsApp</a>
                 </div>
             </div>
             <hr class="my-4">
@@ -310,53 +309,44 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
+    <!-- Floating WhatsApp -->
     <a href="https://wa.me/2348068939047" target="_blank" class="floating-whatsapp">💬</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // ========== RIGHT SIDE IMAGE SLIDER (19.jpeg and 46.jpeg) ==========
-        const sideImages = [
-            "images/hero/19.jpeg",
-            "images/gallary/46.jpeg"
-        ];
+        // Image Rotators (kept from your original with improvements)
+        const sideImages = ["images/hero/19.jpeg", "images/gallary/46.jpeg"];
         let sideIndex = 0;
         const sideImg = document.getElementById('aboutSideImage');
         if (sideImg) {
-            sideImg.src = sideImages[0];
-            sideImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600'; };
             setInterval(() => {
                 sideIndex = (sideIndex + 1) % sideImages.length;
-                sideImg.style.opacity = '0.5';
+                sideImg.style.opacity = '0';
                 setTimeout(() => {
                     sideImg.src = sideImages[sideIndex];
-                    sideImg.onerror = function() { this.src = 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600'; };
                     sideImg.style.opacity = '1';
-                }, 200);
-            }, 5000);
+                }, 400);
+            }, 6000);
         }
 
-        // ========== FOUNDER IMAGE SLIDER ==========
+        // Founder Image Rotator
         const founderImages = [
-            "images/Propretries%20Images/1.jpeg",
-            "images/Propretries%20Images/2.jpeg",
-            "images/Propretries%20Images/3.jpeg",
-            "images/Propretries%20Images/4.jpeg"
+            "images/Propretries Images/1.jpeg",
+            "images/Propretries Images/2.jpeg",
+            "images/Propretries Images/3.jpeg",
+            "images/Propretries Images/4.jpeg"
         ];
         let founderIdx = 0;
-        const founderImgElem = document.getElementById('founderSliderImg');
-        if (founderImgElem) {
-            founderImgElem.src = founderImages[0];
-            founderImgElem.onerror = function() { this.src = 'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600'; };
+        const founderImg = document.getElementById('founderSliderImg');
+        if (founderImg) {
             setInterval(() => {
                 founderIdx = (founderIdx + 1) % founderImages.length;
-                founderImgElem.style.opacity = '0.5';
+                founderImg.style.opacity = '0';
                 setTimeout(() => {
-                    founderImgElem.src = founderImages[founderIdx];
-                    founderImgElem.onerror = function() { this.src = 'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600'; };
-                    founderImgElem.style.opacity = '1';
-                }, 200);
+                    founderImg.src = founderImages[founderIdx];
+                    founderImg.style.opacity = '1';
+                }, 400);
             }, 5000);
         }
     </script>
