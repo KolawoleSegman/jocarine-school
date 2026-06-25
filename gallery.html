@@ -128,7 +128,7 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo path corrected) -->
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -330,15 +330,15 @@
             });
         }
 
-        // ----- UPDATED IMAGE ARRAYS WITH CORRECT PATHS -----
+        // ----- ALL IMAGE ARRAYS USING FACILITIES PATH STRUCTURE -----
 
-        // Cultural Day (c1-c10) - images in root
+        // Cultural Day (c1-c10) - images in root images folder
         const culturalItems = [];
         for (let i = 1; i <= 10; i++) {
             culturalItems.push({ type: 'image', src: `images/c${i}.jpeg` });
         }
 
-        // Excursions (unchanged)
+        // Excursions 
         const excursionItems = [
             { type: 'image', src: "images/gallary/excursions/48.jpeg" },
             { type: 'image', src: "images/gallary/excursions/58.jpeg" },
@@ -348,19 +348,19 @@
             { type: 'image', src: "images/gallary/excursions/65.jpeg" }
         ];
 
-        // Kunfu Training (k1-k3) - images in root
+        // Kunfu Training (k1-k3) - images in root images folder
         const kunfuItems = [];
         for (let i = 1; i <= 3; i++) {
             kunfuItems.push({ type: 'image', src: `images/k${i}.jpeg` });
         }
 
-        // Playground (p1-p4) - images in root
+        // Playground (p1-p4) - images in root images folder
         const playgroundItems = [];
         for (let i = 1; i <= 4; i++) {
             playgroundItems.push({ type: 'image', src: `images/p${i}.png` });
         }
 
-        // Practicals (unchanged)
+        // Practical Skills - using the same structure as facilities
         const practicalsItems = [
             { type: 'image', src: "images/gallary/practicals/20.jpeg" },
             { type: 'image', src: "images/gallary/practicals/21.jpeg" },
@@ -401,7 +401,7 @@
             { type: 'image', src: "images/gallary/practicals/Game.jpeg" }
         ];
 
-        // Founder (unchanged)
+        // Founder - using Propretries Images path
         const founderItems = [
             { type: 'image', src: "images/Propretries%20Images/1.jpeg" },
             { type: 'image', src: "images/Propretries%20Images/2.jpeg" },
@@ -409,13 +409,13 @@
             { type: 'image', src: "images/Propretries%20Images/4.jpeg" }
         ];
 
-        // Testimonials (unchanged)
+        // Testimonials - using testimonials folder
         const testimonialItems = [];
         for (let i = 1; i <= 6; i++) {
             testimonialItems.push({ type: 'image', src: `images/testimonials/${i}.jpeg` });
         }
 
-        // Facilities (unchanged)
+        // Facilities - using facilities folder (as in facilities.html)
         const facilitiesItems = [
             { type: 'image', src: "images/facilities/computer-room.jpg" },
             { type: 'image', src: "images/facilities/library.jpg" },
@@ -423,7 +423,7 @@
             { type: 'image', src: "images/facilities/playground.jpg" }
         ];
 
-        // Flyers (unchanged)
+        // Flyers - using flyers folder
         const flyersItems = [
             { type: 'image', src: "images/flyers/back-to-school.jpg" },
             { type: 'image', src: "images/flyers/prospectus-2026.jpg" },
