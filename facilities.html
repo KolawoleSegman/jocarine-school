@@ -162,10 +162,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Playground -->
+            <!-- Playground (with rotating images p1, p2, p3, p4) -->
             <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
-                    <img src="images/facilities/playground.jpg" class="facility-img" alt="Playground" onerror="this.src='https://placehold.co/400x300?text=Playground'">
+                    <img id="playgroundImg" class="facility-img" src="images/p1.png" alt="Playground">
                     <div class="p-3">
                         <h5>🏃‍♂️ Playground & Learning Spaces</h5>
                         <p>Safe outdoor play areas and learning spaces where children can engage in physical activities, develop motor skills, and enjoy social interaction. Our playground equipment is age-appropriate and designed to promote healthy physical development and teamwork.</p>
@@ -245,29 +245,46 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Computer Room Image Slider (rotates between com1.png and com2.png every 5 seconds) -->
+    <!-- Computer Room Image Slider -->
     <script>
         const computerImages = [
             "images/com1.png",
-            "images/com3.png",
-            "images/com2.png"
+            "images/com2.png",
+            "images/com3.png"
         ];
-        let currentIdx = 0;
+        let compIdx = 0;
         const computerImg = document.getElementById('computerRoomImg');
         
         if (computerImg) {
-            // Preload images to avoid flicker
-            const img1 = new Image();
-            const img2 = new Image();
-            img1.src = "images/com1.png";
-            img2.src = "images/com2.png";
-            
             setInterval(() => {
-                currentIdx = (currentIdx + 1) % computerImages.length;
+                compIdx = (compIdx + 1) % computerImages.length;
                 computerImg.style.opacity = '0.5';
                 setTimeout(() => {
-                    computerImg.src = computerImages[currentIdx];
+                    computerImg.src = computerImages[compIdx];
                     computerImg.style.opacity = '1';
+                }, 300);
+            }, 5000);
+        }
+    </script>
+    
+    <!-- Playground Image Slider (p1, p2, p3, p4) -->
+    <script>
+        const playgroundImages = [
+            "images/p1.png",
+            "images/p2.png",
+            "images/p3.png",
+            "images/p4.png"
+        ];
+        let playIdx = 0;
+        const playgroundImg = document.getElementById('playgroundImg');
+        
+        if (playgroundImg) {
+            setInterval(() => {
+                playIdx = (playIdx + 1) % playgroundImages.length;
+                playgroundImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    playgroundImg.src = playgroundImages[playIdx];
+                    playgroundImg.style.opacity = '1';
                 }, 300);
             }, 5000);
         }
