@@ -96,11 +96,11 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo fixed - no "JI" text) -->
+    <!-- NAVIGATION BAR (Logo path corrected to images/logo.png/logo.jpeg) -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
+                <img src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
                      onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
                 <span class="ms-2">Jocarine International</span>
             </a>
@@ -184,8 +184,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // List of flyer images from the images/flyers folder (based on actual files)
-        // You can add or remove filenames as needed. These are the common ones from your project.
+        // List of flyer images from the images/flyers folder
         const flyerFiles = [
             { name: "Back to School - September 2025", file: "back-to-school.jpg" },
             { name: "First Term 2026 Prospectus", file: "prospectus-2026.jpg" },
@@ -197,7 +196,7 @@
             { name: "Admission Open House Flyer", file: "admission-open-house.jpg" }
         ];
 
-        // Helper: create flyer card
+        // Render flyers
         function renderFlyers() {
             const container = document.getElementById('flyersGrid');
             if (!container) return;
@@ -219,8 +218,6 @@
             });
         }
 
-        // Also check if there are more images in the folder dynamically? For simplicity we use the list.
-        // But we can also try to detect common patterns: you can manually add more.
         renderFlyers();
     </script>
 </body>
