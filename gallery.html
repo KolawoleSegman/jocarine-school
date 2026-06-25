@@ -118,16 +118,22 @@
             max-height: 50px;
             width: auto;
         }
+        .social-icon {
+            transition: transform 0.2s;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo fixed - no "JI" text) -->
+    <!-- NAVIGATION BAR (Logo path corrected) -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <img src="images/logo.png" alt="Jocarine Logo" height="50" 
-                     onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
+                <img id="navLogo" src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
+                     onerror="this.onerror=null; this.src='images/logo.png'; this.onerror=function(){this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}};">
                 <span class="ms-2">Jocarine International</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -245,7 +251,7 @@
             </div>
         </div>
 
-        <!-- Gallery Sections (initially hidden) -->
+        <!-- Gallery Sections -->
         <div id="cultural-section" class="gallery-section"><h3 class="mb-3"><i class="fas fa-music me-2"></i> Cultural Day</h3><div class="row g-4" id="culturalDayGallery"></div></div>
         <div id="excursions-section" class="gallery-section"><h3 class="mb-3"><i class="fas fa-bus me-2"></i> Excursions</h3><div class="row g-4" id="excursionsGallery"></div></div>
         <div id="kunfu-section" class="gallery-section"><h3 class="mb-3"><i class="fas fa-fist-raised me-2"></i> Kunfu Training</h3><div class="row g-4" id="kunfuGallery"></div></div>
@@ -258,7 +264,7 @@
         <div id="videos-section" class="gallery-section"><h3 class="mb-3"><i class="fas fa-video me-2"></i> School Videos</h3><div class="row justify-content-center"><div class="col-md-8"><div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow"><video controls poster="images/gallary/27.jpeg"><source src="images/school-promo.mp4" type="video/mp4">Your browser does not support video.</video></div><p class="text-center text-muted mt-2">More videos on our TikTok & Instagram!</p></div></div></div>
     </div>
 
-    <!-- FOOTER (with all social links) -->
+    <!-- FOOTER -->
     <footer class="py-5">
         <div class="container">
             <div class="row">
@@ -274,10 +280,10 @@
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
                     <div class="d-flex gap-4 fs-3">
-                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white" title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/100064036215413/" target="_blank" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jocarineinternational/" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/jocarine_school" target="_blank" class="text-white"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://tiktok.com/@jocarine.internat" target="_blank" class="text-white"><i class="fab fa-tiktok"></i></a>
                     </div>
                     <div class="mt-4">
                         <a href="https://wa.me/2348068939047" target="_blank" class="btn btn-success btn-lg">💬 Chat on WhatsApp</a>
@@ -324,68 +330,105 @@
             });
         }
 
-        // ----- ALL IMAGE & VIDEO ARRAYS (based on your actual folder structure) -----
-        const culturalItems = [
-            { type: 'image', src: "images/gallary/Cultural%20Day/2.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/3.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/4.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/5.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/6.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/7.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/8.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/9.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/10.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/11.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/12.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/13.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/14.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/31.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/33.jpeg" }, { type: 'image', src: "images/gallary/Cultural%20Day/Cultural%202.jpeg" },
-            { type: 'image', src: "images/gallary/Cultural%20Day/Cultural%20day.jpeg" }
-        ];
+        // ----- UPDATED IMAGE ARRAYS -----
+
+        // Cultural Day (c1-c10)
+        const culturalItems = [];
+        for (let i = 1; i <= 10; i++) {
+            culturalItems.push({ type: 'image', src: `images/gallary/Cultural%20Day/c${i}.jpeg` });
+        }
+
+        // Excursions (unchanged)
         const excursionItems = [
-            { type: 'image', src: "images/gallary/excursions/48.jpeg" }, { type: 'image', src: "images/gallary/excursions/58.jpeg" },
-            { type: 'image', src: "images/gallary/excursions/59.jpeg" }, { type: 'image', src: "images/gallary/excursions/60.jpeg" },
-            { type: 'image', src: "images/gallary/excursions/64.jpeg" }, { type: 'image', src: "images/gallary/excursions/65.jpeg" }
+            { type: 'image', src: "images/gallary/excursions/48.jpeg" },
+            { type: 'image', src: "images/gallary/excursions/58.jpeg" },
+            { type: 'image', src: "images/gallary/excursions/59.jpeg" },
+            { type: 'image', src: "images/gallary/excursions/60.jpeg" },
+            { type: 'image', src: "images/gallary/excursions/64.jpeg" },
+            { type: 'image', src: "images/gallary/excursions/65.jpeg" }
         ];
-        const kunfuItems = [
-            { type: 'image', src: "images/gallary/kunfu/29.jpeg" }, { type: 'image', src: "images/gallary/kunfu/38.jpeg" },
-            { type: 'image', src: "images/gallary/kunfu/Kunfu.jpeg" }
-        ];
-        const playgroundItems = [
-            { type: 'image', src: "images/gallary/play%20ground/17.jpeg" }, { type: 'image', src: "images/gallary/play%20ground/18.jpeg" },
-            { type: 'image', src: "images/gallary/play%20ground/40.jpeg" }, { type: 'image', src: "images/gallary/play%20ground/41.jpeg" },
-            { type: 'image', src: "images/gallary/play%20ground/42.jpeg" }, { type: 'image', src: "images/gallary/play%20ground/43.jpeg" },
-            { type: 'image', src: "images/gallary/play%20ground/47.jpeg" }, { type: 'image', src: "images/gallary/play%20ground/49.jpeg" },
-            { type: 'image', src: "images/gallary/play%20ground/49%20Excursion.jpeg" }
-        ];
+
+        // Kunfu Training (k1-k3)
+        const kunfuItems = [];
+        for (let i = 1; i <= 3; i++) {
+            kunfuItems.push({ type: 'image', src: `images/gallary/kunfu/k${i}.jpeg` });
+        }
+
+        // Playground (p1-p4)
+        const playgroundItems = [];
+        for (let i = 1; i <= 4; i++) {
+            playgroundItems.push({ type: 'image', src: `images/gallary/play%20ground/p${i}.jpeg` });
+        }
+
+        // Practicals (unchanged)
         const practicalsItems = [
-            { type: 'image', src: "images/gallary/practicals/20.jpeg" }, { type: 'image', src: "images/gallary/practicals/21.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/23.jpeg" }, { type: 'image', src: "images/gallary/practicals/24.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/35.jpeg" }, { type: 'image', src: "images/gallary/practicals/36.jpeg" },
-            { type: 'video', src: "images/gallary/practicals/15.mp4" }, { type: 'video', src: "images/gallary/practicals/16.mp4" },
-            { type: 'image', src: "images/gallary/practicals/19.jpeg" }, { type: 'image', src: "images/gallary/practicals/27.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/28.jpeg" }, { type: 'image', src: "images/gallary/practicals/30.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/37.jpeg" }, { type: 'image', src: "images/gallary/practicals/39.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/44.jpeg" }, { type: 'image', src: "images/gallary/practicals/45.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/46.jpeg" }, { type: 'image', src: "images/gallary/practicals/50.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/51.jpeg" }, { type: 'image', src: "images/gallary/practicals/52.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/53.jpeg" }, { type: 'image', src: "images/gallary/practicals/55.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/56.jpeg" }, { type: 'image', src: "images/gallary/practicals/57.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/58.jpeg" }, { type: 'image', src: "images/gallary/practicals/59.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/60.jpeg" }, { type: 'image', src: "images/gallary/practicals/61.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/62.jpeg" }, { type: 'image', src: "images/gallary/practicals/63.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/64.jpeg" }, { type: 'image', src: "images/gallary/practicals/65.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/66.jpeg" }, { type: 'image', src: "images/gallary/practicals/67.jpeg" },
-            { type: 'image', src: "images/gallary/practicals/68.jpeg" }, { type: 'image', src: "images/gallary/practicals/70.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/20.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/21.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/23.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/24.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/35.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/36.jpeg" },
+            { type: 'video', src: "images/gallary/practicals/15.mp4" },
+            { type: 'video', src: "images/gallary/practicals/16.mp4" },
+            { type: 'image', src: "images/gallary/practicals/19.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/27.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/28.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/30.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/37.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/39.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/44.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/45.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/46.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/50.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/51.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/52.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/53.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/55.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/56.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/57.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/58.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/59.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/60.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/61.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/62.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/63.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/64.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/65.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/66.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/67.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/68.jpeg" },
+            { type: 'image', src: "images/gallary/practicals/70.jpeg" },
             { type: 'image', src: "images/gallary/practicals/Game.jpeg" }
         ];
+
+        // Founder (unchanged)
         const founderItems = [
-            { type: 'image', src: "images/Propretries%20Images/1.jpeg" }, { type: 'image', src: "images/Propretries%20Images/2.jpeg" },
-            { type: 'image', src: "images/Propretries%20Images/3.jpeg" }, { type: 'image', src: "images/Propretries%20Images/4.jpeg" }
+            { type: 'image', src: "images/Propretries%20Images/1.jpeg" },
+            { type: 'image', src: "images/Propretries%20Images/2.jpeg" },
+            { type: 'image', src: "images/Propretries%20Images/3.jpeg" },
+            { type: 'image', src: "images/Propretries%20Images/4.jpeg" }
         ];
+
+        // Testimonials (unchanged)
         const testimonialItems = [];
-        for (let i = 1; i <= 6; i++) testimonialItems.push({ type: 'image', src: `images/testimonials/${i}.jpeg` });
+        for (let i = 1; i <= 6; i++) {
+            testimonialItems.push({ type: 'image', src: `images/testimonials/${i}.jpeg` });
+        }
+
+        // Facilities (unchanged)
         const facilitiesItems = [
-            { type: 'image', src: "images/facilities/computer-room.jpg" }, { type: 'image', src: "images/facilities/library.jpg" },
-            { type: 'image', src: "images/facilities/classrooms.jpg" }, { type: 'image', src: "images/facilities/playground.jpg" }
+            { type: 'image', src: "images/facilities/computer-room.jpg" },
+            { type: 'image', src: "images/facilities/library.jpg" },
+            { type: 'image', src: "images/facilities/classrooms.jpg" },
+            { type: 'image', src: "images/facilities/playground.jpg" }
         ];
+
+        // Flyers (unchanged)
         const flyersItems = [
-            { type: 'image', src: "images/flyers/back-to-school.jpg" }, { type: 'image', src: "images/flyers/prospectus-2026.jpg" },
-            { type: 'image', src: "images/flyers/school-calendar.jpg" }, { type: 'image', src: "images/flyers/cultural-day-invite.jpg" }
+            { type: 'image', src: "images/flyers/back-to-school.jpg" },
+            { type: 'image', src: "images/flyers/prospectus-2026.jpg" },
+            { type: 'image', src: "images/flyers/school-calendar.jpg" },
+            { type: 'image', src: "images/flyers/cultural-day-invite.jpg" }
         ];
 
         // Function to show a gallery section and render its content once
@@ -393,6 +436,7 @@
             cultural: false, excursions: false, kunfu: false, playground: false,
             practicals: false, founder: false, testimonials: false, facilities: false, flyers: false
         };
+
         function showGallery(section) {
             // Hide all sections
             document.querySelectorAll('.gallery-section').forEach(sec => sec.classList.remove('active'));
@@ -411,14 +455,54 @@
                     case 'testimonials': renderGallery('testimonialsGallery', testimonialItems, 3); break;
                     case 'facilities': renderGallery('facilitiesGallery', facilitiesItems, 4); break;
                     case 'flyers': renderGallery('flyersGallery', flyersItems, 4); break;
-                    case 'videos': // videos section is static, no rendering needed
+                    case 'videos':
                         break;
                 }
                 renderedFlags[section] = true;
             }
-            // Scroll to section smoothly
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+
+        // Fix logo: try multiple paths
+        function fixLogo() {
+            const logoImg = document.getElementById('navLogo');
+            if (!logoImg) return;
+            
+            const possiblePaths = [
+                'images/logo.png/logo.jpeg',
+                'images/logo.png',
+                'images/logo.jpeg'
+            ];
+            
+            let currentIndex = 0;
+            
+            function tryNextPath() {
+                if (currentIndex >= possiblePaths.length) {
+                    logoImg.style.display = 'none';
+                    const parent = logoImg.parentElement;
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-school me-2';
+                    icon.style.fontSize = '1.8rem';
+                    parent.insertBefore(icon, logoImg);
+                    return;
+                }
+                
+                const testImg = new Image();
+                testImg.onload = function() {
+                    logoImg.src = possiblePaths[currentIndex];
+                    logoImg.style.display = 'inline';
+                };
+                testImg.onerror = function() {
+                    currentIndex++;
+                    tryNextPath();
+                };
+                testImg.src = possiblePaths[currentIndex];
+            }
+            
+            tryNextPath();
+        }
+        
+        document.addEventListener('DOMContentLoaded', fixLogo);
     </script>
 </body>
 </html>
