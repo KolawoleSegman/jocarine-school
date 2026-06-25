@@ -76,6 +76,7 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
+            transition: opacity 0.5s ease;
         }
         .feature-icon {
             font-size: 2.5rem;
@@ -96,10 +97,11 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo path corrected) -->
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <!-- Logo path: images/logo.png/logo.jpeg -->
                 <img src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
                      onerror="this.onerror=null; this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}">
                 <span class="ms-2">Jocarine International</span>
@@ -131,10 +133,10 @@
 
         <!-- Main Facilities Grid -->
         <div class="row g-4 mb-5">
-            <!-- Computer Room -->
+            <!-- Computer Room (with rotating images) -->
             <div class="col-md-6 col-lg-3">
                 <div class="facility-card">
-                    <img src="images/facilities/computer-room.jpg" class="facility-img" alt="Computer Room" onerror="this.src='https://placehold.co/400x300?text=Computer+Room'">
+                    <img id="computerRoomImg" class="facility-img" src="images/com1.png" alt="Computer Room" onerror="this.src='https://placehold.co/400x300?text=Computer+Room'">
                     <div class="p-3">
                         <h5>💻 Computer Room</h5>
                         <p>Modern computer laboratory equipped with up-to-date technology to introduce students to digital literacy from an early age. Children learn basic computer skills, coding fundamentals, and how to use technology as a tool for learning and creativity.</p>
@@ -243,5 +245,27 @@
     <a href="https://wa.me/2348068939047?text=Hello!%20I%20would%20like%20to%20inquire%20about%20Jocarine%20International%20Nursery%20and%20Primary%20School." target="_blank" class="floating-whatsapp">💬</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Computer Room Image Slider -->
+    <script>
+        // Computer Room images - rotates between com1.png and com2.png
+        const computerImages = [
+            "images/com1.png",
+            "images/com2.png"
+        ];
+        let currentIdx = 0;
+        const computerImg = document.getElementById('computerRoomImg');
+        
+        if (computerImg) {
+            setInterval(() => {
+                currentIdx = (currentIdx + 1) % computerImages.length;
+                computerImg.style.opacity = '0.5';
+                setTimeout(() => {
+                    computerImg.src = computerImages[currentIdx];
+                    computerImg.style.opacity = '1';
+                }, 300);
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
