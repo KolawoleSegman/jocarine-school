@@ -96,12 +96,12 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Logo with multiple fallback paths) -->
+    <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-                <img id="navLogo" src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50" 
-                     onerror="this.onerror=null; this.src='images/logo.png'; this.onerror=function(){this.src='images/logo.jpeg'; this.onerror=function(){this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<i class=\'fas fa-school me-2\' style=\'font-size:1.8rem;\'></i>');}};">
+                <!-- Logo with JavaScript fallback -->
+                <img id="navLogo" src="images/logo.png/logo.jpeg" alt="Jocarine Logo" height="50">
                 <span class="ms-2">Jocarine International</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -184,7 +184,57 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // List of flyer images from the images/flyers folder
+        // ========== FIX LOGO ==========
+        // This will try all possible logo paths and use the first one that works
+        function fixLogo() {
+            const logoImg = document.getElementById('navLogo');
+            if (!logoImg) return;
+            
+            const possiblePaths = [
+                'images/logo.png/logo.jpeg',  // your current path
+                'images/logo.png',            // if logo.png is a file
+                'images/logo.jpeg',           // if logo.jpeg is a file
+                'images/logo/logo.jpeg',      // if logo is a folder
+                'images/logo/logo.png'
+            ];
+            
+            let currentIndex = 0;
+            
+            function tryNextPath() {
+                if (currentIndex >= possiblePaths.length) {
+                    // All paths failed – show school icon
+                    logoImg.style.display = 'none';
+                    const parent = logoImg.parentElement;
+                    const icon = document.createElement('i');
+                    icon.className = 'fas fa-school me-2';
+                    icon.style.fontSize = '1.8rem';
+                    parent.insertBefore(icon, logoImg);
+                    return;
+                }
+                
+                const testImg = new Image();
+                testImg.onload = function() {
+                    // Image loaded successfully
+                    logoImg.src = possiblePaths[currentIndex];
+                    logoImg.style.display = 'inline';
+                    console.log('Logo loaded from: ' + possiblePaths[currentIndex]);
+                };
+                testImg.onerror = function() {
+                    // Try next path
+                    currentIndex++;
+                    tryNextPath();
+                };
+                testImg.src = possiblePaths[currentIndex];
+            }
+            
+            // Start trying paths
+            tryNextPath();
+        }
+        
+        // Run when page loads
+        document.addEventListener('DOMContentLoaded', fixLogo);
+
+        // ========== FLYERS ==========
         const flyerFiles = [
             { name: "Back to School - September 2025", file: "back-to-school.jpg" },
             { name: "First Term 2026 Prospectus", file: "prospectus-2026.jpg" },
@@ -196,7 +246,6 @@
             { name: "Admission Open House Flyer", file: "admission-open-house.jpg" }
         ];
 
-        // Render flyers
         function renderFlyers() {
             const container = document.getElementById('flyersGrid');
             if (!container) return;
@@ -219,10 +268,6 @@
         }
 
         renderFlyers();
-
-        // Debug: Check if logo exists
-        console.log('Logo path attempted: images/logo.png/logo.jpeg');
-        console.log('Check if logo exists at: ' + window.location.origin + '/images/logo.png/logo.jpeg');
     </script>
 </body>
 </html>
