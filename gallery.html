@@ -330,12 +330,12 @@
             });
         }
 
-        // ----- UPDATED IMAGE ARRAYS -----
+        // ----- UPDATED IMAGE ARRAYS WITH CORRECT PATHS -----
 
-        // Cultural Day (c1-c10)
+        // Cultural Day (c1-c10) - images in root
         const culturalItems = [];
         for (let i = 1; i <= 10; i++) {
-            culturalItems.push({ type: 'image', src: `images/gallary/Cultural%20Day/c${i}.jpeg` });
+            culturalItems.push({ type: 'image', src: `images/c${i}.jpeg` });
         }
 
         // Excursions (unchanged)
@@ -348,16 +348,16 @@
             { type: 'image', src: "images/gallary/excursions/65.jpeg" }
         ];
 
-        // Kunfu Training (k1-k3)
+        // Kunfu Training (k1-k3) - images in root
         const kunfuItems = [];
         for (let i = 1; i <= 3; i++) {
-            kunfuItems.push({ type: 'image', src: `images/gallary/kunfu/k${i}.jpeg` });
+            kunfuItems.push({ type: 'image', src: `images/k${i}.jpeg` });
         }
 
-        // Playground (p1-p4)
+        // Playground (p1-p4) - images in root
         const playgroundItems = [];
         for (let i = 1; i <= 4; i++) {
-            playgroundItems.push({ type: 'image', src: `images/gallary/play%20ground/p${i}.jpeg` });
+            playgroundItems.push({ type: 'image', src: `images/p${i}.png` });
         }
 
         // Practicals (unchanged)
